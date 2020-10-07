@@ -9,6 +9,7 @@
   "author": "Juan D Grossman",
   "license": "ISC",
   "dependencies": {
+    "node-emoji": "^1.10.0",
     "puppeteer": "^5.3.1"
   }
 }
