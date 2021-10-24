@@ -3,15 +3,17 @@ var emoji = require('node-emoji');
 
 async function run(){
 const browser = await puppeteer.launch( {
-	headless: true
+	headless: true //make sure the browser is running on headless mode
 	});
 console.log(emoji.emojify(":package: Fetching Apple EarPods with Lightning Connector - White Latest Price"));
 const page = await browser.newPage();
+	
 //Wait till network becomes Idle
 await page.goto('https://www.amazon.com/Apple-EarPods-Lightning-Connector-White/dp/B01M0GB8CC/', { waitUntil: 'networkidle2' });
 blockingWait(5);
 const selector = '#priceblock_ourprice'
 
+// Wait for 10 Seconds
 await page.waitForTimeout(10000);
 
 try {
@@ -25,6 +27,7 @@ try {
 await browser.close(); 	
 };
 
+// Init Wait Function
 function blockingWait(seconds) {
   //simple blocking technique (wait...)
   var waitTill = new Date(new Date().getTime() + seconds * 1000);
