@@ -1,4 +1,5 @@
 # Puppeteer-Amazon-Example
+
 [![dependencies Status](https://david-dm.org/JuanDGrossman/Puppeteer-Amazon-Example/status.svg?style=flat-square)](https://david-dm.org/JuanDGrossman/Puppeteer-Amazon-Example)
 
 📦 Fetching Today's Price of Product from Amazon
@@ -24,7 +25,7 @@ npm install
 - Run it
 
 ```sh
-npm start
+npm run dev
 ```
 
 ### License
